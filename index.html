@@ -133,6 +133,53 @@
             </div>
             
             <div class="project-showcase">
+                <!-- Project: The Wire Trace Trial -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-date">Nov 2026</div>
+                        <h3>Autonomous 3D Wire Tracing with Addverb HEAL Cobot & DLS-IK Control</h3>
+                        <p class="advisor">Course: ME 639 (Introduction to Robotics) · Addverb HEAL 6-DOF Cobot</p>
+                        <p>Engineered an end-to-end trajectory teaching, smoothing, and replay framework on an industrial 6-DOF Addverb HEAL collaborative robot to autonomously trace an intricate 3D wire profile with a stick loop without contact.</p>
+                        <ul class="impact-list">
+                            <li>Developed a 100 Hz ROS 2 keyboard jogging recorder to capture continuous Cartesian tip poses and joint trajectories without human hand tremor.</li>
+                            <li>Formulated an offline trajectory processing pipeline with arc-length reparameterization, Gaussian smoothing in joint space, and time-optimal scaling subject to joint velocity/acceleration and Cartesian limits.</li>
+                            <li>Architected a 100 Hz closed-loop Damped Least-Squares Inverse Kinematics (DLS-IK) controller combining feedforward trajectory injection with feedback pose correction and singularity damping.</li>
+                            <li>Integrated error-adaptive progress rate scaling, automated emergency halt boundaries, and contact touch logging, achieving successful zero-touch bidirectional runs.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>ROS 2</span><span>Python</span><span>Damped Least-Squares IK</span><span>Trajectory Optimization</span><span>PyKDL</span><span>ros2_control</span><span>Industrial Robotics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RishabhShahIITGN/The-Wire-Trace-Trial-Heal" target="_blank" class="btn-secondary btn-small">GitHub Code</a>
+                            <a href="https://youtu.be/hoY5CwrO2DI" target="_blank" class="btn-primary btn-small">Demo Video (Forward)</a>
+                            <a href="https://youtu.be/m1hTtmguCew" target="_blank" class="btn-secondary btn-small">Demo Video (Reverse)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: The Peg Sorting -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-date">Nov 2026</div>
+                        <h3>Autonomous Vision-Guided Peg Sorting & Insertion with OpenMANIPULATOR-X</h3>
+                        <p class="advisor">Course: ME 639 (Introduction to Robotics) · ROBOTIS OpenMANIPULATOR-X</p>
+                        <p>Engineered an autonomous vision-guided pick-and-place manipulation system using a 4-DOF ROBOTIS OpenMANIPULATOR-X arm and Intel RealSense RGB-D camera to detect, classify, pick, and insert colored geometric pegs into matching board sockets.</p>
+                        <ul class="impact-list">
+                            <li>Built an RGB-D perception pipeline using HSV color segmentation, contour footprint geometry, ArUco extrinsic calibration (&lt; 1 px reprojection error), and 3D point cloud transformation into the robot base frame.</li>
+                            <li>Developed analytical forward and inverse kinematics solvers with a collision-aware pick-and-place planner featuring A* obstacle avoidance around previously seated pegs.</li>
+                            <li>Formulated passive yaw alignment compensation for the 4-DOF unactuated wrist roll and tuned per-shape grasping/insertion offsets.</li>
+                            <li>Engineered an autonomous state machine in ROS 2 (<code>ros2_control</code>) with visual verification passes, retry routines, watchdog e-stops, and keyboard teleoperation.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>ROS 2 Humble</span><span>Python</span><span>OpenCV</span><span>Intel RealSense RGB-D</span><span>Inverse Kinematics</span><span>A* Path Planning</span><span>ros2_control</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RishabhShahIITGN/peg-sorting-OMX" target="_blank" class="btn-secondary btn-small">GitHub Code</a>
+                            <a href="https://youtu.be/XiwHk8Va8t8" target="_blank" class="btn-primary btn-small">Demo Video</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project: Pick and Place Manipulation -->
                 <div class="project-card glass-card">
                     <div class="project-content">
@@ -237,7 +284,10 @@
                     <div class="skill-badges">
                         <span class="badge">ROS 2</span>
                         <span class="badge">MuJoCo</span>
+                        <span class="badge">Differential & DLS-IK</span>
+                        <span class="badge">ros2_control</span>
                         <span class="badge">Sensor Fusion</span>
+                        <span class="badge">Path Planning</span>
                         <span class="badge">Deep RL</span>
                     </div>
                 </div>
@@ -253,6 +303,8 @@
                 <div class="skill-category glass-card">
                     <h3>Libraries & Tools</h3>
                     <div class="skill-badges">
+                        <span class="badge">OpenCV</span>
+                        <span class="badge">PyKDL / SciPy</span>
                         <span class="badge">NumPy</span>
                         <span class="badge">Pandas</span>
                         <span class="badge">Matplotlib</span>
