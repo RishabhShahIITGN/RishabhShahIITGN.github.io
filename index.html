@@ -133,6 +133,30 @@
             </div>
             
             <div class="project-showcase">
+                <!-- Project: Ball/Car-and-Beam Control System -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-date">Nov 2026</div>
+                        <h3>Ball/Car-and-Beam Control System: System Identification, Lead Compensator & Hardware Implementation</h3>
+                        <p class="advisor">Course: ES 245 (Control Systems Laboratory) · Ball/Car-and-Beam System</p>
+                        <p>Developed an end-to-end classical control engineering pipeline for a physical ball/car-and-beam balancing system across experimental system identification, frequency-domain stability analysis, lead compensator synthesis, and 50 Hz discrete microcontroller implementation.</p>
+                        <ul class="impact-list">
+                            <li>Derived continuous-time transfer function <code>G(s) = -0.6463 / [s(s + 0.0170)]</code> from 50 Hz experimental chirp actuator-sensor recordings using subspace identification (<code>n4sid</code>) and nonlinear ZOH parameter estimation (79.94% NRMSE fit).</li>
+                            <li>Formulated frequency-domain stability analysis across Root Locus, zoomed Nyquist, and Bode diagrams; diagnosed severe open-loop underdamping (&zeta; = 0.0105, P<sub>m</sub> = 1.21&deg;) causing uncompensated proportional control to fail overshoot (&gt;96%) and settling time specs.</li>
+                            <li>Synthesized continuous-time Lead Compensator <code>C(s) = 4.50(s + 0.05)/(s + 3.50)</code> boosting Phase Margin from 1.21&deg; to 74.63&deg; (+73.4&deg;), achieving settling time T<sub>s</sub> = 2.56 s (&lt; 5 s spec) and percent overshoot OS = 3.28% (&lt; 5% spec).</li>
+                            <li>Discretized to C(z) via Tustin/Bilinear transform at 50 Hz on Arduino Uno with outlier-aware ultrasonic filtering, &plusmn;16&deg; tilt saturation clamping, and zone-based anti-windup integration overcoming mechanical track stiction.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>MATLAB</span><span>Arduino C++</span><span>Control Systems</span><span>System Identification (n4sid)</span><span>Lead Compensator</span><span>Root Locus & Nyquist</span><span>Bode Analysis</span><span>Anti-Windup</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RishabhShahIITGN/Control_system" target="_blank" class="btn-secondary btn-small">GitHub Code</a>
+                            <a href="assets/docs/Controls_Report.pdf" target="_blank" class="btn-secondary btn-small">Part-1 Report</a>
+                            <a href="https://youtu.be/fPJmcLcYb88" target="_blank" class="btn-primary btn-small">Demo Video</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project: The Wire Trace Trial -->
                 <div class="project-card glass-card">
                     <div class="project-content">
@@ -286,6 +310,7 @@
                         <span class="badge">MuJoCo</span>
                         <span class="badge">Differential & DLS-IK</span>
                         <span class="badge">ros2_control</span>
+                        <span class="badge">Feedback Control</span>
                         <span class="badge">Sensor Fusion</span>
                         <span class="badge">Path Planning</span>
                         <span class="badge">Deep RL</span>
@@ -294,7 +319,7 @@
                 <div class="skill-category glass-card">
                     <h3>Engineering Software</h3>
                     <div class="skill-badges">
-                        <span class="badge">MATLAB</span>
+                        <span class="badge">MATLAB / Simulink</span>
                         <span class="badge">Autodesk</span>
                         <span class="badge">Ansys</span>
                         <span class="badge">MSC Adams</span>
